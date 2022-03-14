@@ -1,0 +1,324 @@
+<html>
+    <head>
+        <title> Chose Table </title>
+
+        <style>
+            .right {
+            text-align: right;
+            }
+
+            .center {
+            text-align: center;
+            }
+        </style>
+
+        <script>
+            setInterval(myTimer, 1000);
+            function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            }
+        </script>
+
+
+        <style>
+            .grid {
+            display: grid;
+            grid-template-columns: 2fr 2fr 4fr 3fr;
+            grid-template-rows: 70px minmax(200px,auto) 70px;
+            grid-template-areas: 
+                'header header header footer'
+                'main main leftbar leftbar'
+                /* 'main main leftbar leftbar'
+                'main main leftbar leftbar' */
+                'place pic  pic pic';
+                column-gap: 10px;
+                row-gap: 10px;
+                align-items:center;
+            }
+
+            .page-header {
+            grid-area: header;
+            }
+
+            .page-leftbar {
+            grid-area: leftbar;
+            }
+
+            .page-main {
+            grid-area: main;
+            }
+
+            .page-footer {
+            grid-area: footer;
+            }
+
+            .page-place {
+            grid-area: place;
+            }
+
+            .page-pic {
+            grid-area: pic;
+            }
+
+            .content1 {
+            display: grid;
+            color: #242424;
+            background-color: #644226;
+            opacity: 0.9;
+            font-weight: 600;
+            text-align: center;
+            box-sizing: border-box;
+            height: 100%;
+            border: 4px solid black ;
+            padding: 10px;
+            border-radius: 60px 20px;
+            
+            }
+
+            .content2 {
+            display:grid ;
+            color: #242424;
+            font-weight: 600;
+            text-align: center;
+            box-sizing: border-box;
+            height: 100%;
+            border: 10px solid #644226 ;
+            padding: 10px;
+            border-radius: 50px 20px;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .content3 {
+            display:grid ;
+            color: #242424;
+            font-weight: 600;
+            text-align: center;
+            box-sizing: border-box;
+            height: 100%;
+            border: 10px solid #644226 ;
+            padding: 10px;
+            border-radius: 50px 20px;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .content4 {
+            display: grid;
+            color: #242424;
+            background-color: #644226;
+            opacity: 0.9;
+            font-weight: 600;
+            text-align: center;
+            box-sizing: border-box;
+            height: 100%;
+            border: 4px solid black ;
+            padding: 10px;
+            border-radius: 60px 20px;
+            
+            }
+
+            .paint{
+                display: grid;
+                background-color: #d8c3af;
+                opacity: 1;
+                border: 8px solid black ;
+                padding: 15px;
+                border-radius: 50px 20px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .paint1{
+                display: grid;
+                /* background-color: #d8c3af; */
+                border: px solid black ;
+                padding: 15px;
+                border-radius: 50px 20px;
+                justify-content: center;
+                align-items: center;
+            }
+
+        </style>
+
+        <style >
+            html { 
+                background: url(bg1.png) no-repeat center fixed; 
+                background-size: cover;
+            } 
+            
+            img {
+                border-radius: 60%;
+            }
+        </style>
+
+    <style type="text/css">
+        h1{
+            font-family:Segoe Print;
+            font-size: 60px;
+            text-shadow: 5px 2px #a36f44; 
+        }
+
+        h2{
+            font-family:JasmineUPC;
+            font-size: 40px;
+            /* text-shadow: 2px 2px #070707;  */
+        }
+
+        h3{
+            font-family:JasmineUPC;
+            font-size: 60px;
+            text-shadow: 2px 2px #a36f44; 
+        }
+
+        h4{
+            font-family:JasmineUPC;
+            font-size: 40px;
+            /* text-shadow: 2px 2px #070707;  */
+        }
+        p{
+            font-size: 30px;
+            font-family:JasmineUPC;
+        }
+    </style>
+
+        <body>
+            <div class="grid">
+                <header class="page-header">
+                    <div class="content1">
+                        <div class="paint">
+                            <marquee  behavior="slide" scrollamount="15">
+                                <div class="div center">
+                                    <font size="10px" face="Segoe Print">
+                                        <img src="gif3.gif" alt="Snow" width="8%" align="center">
+                                        ...Welcome to the " IN & ON Coffee "... 
+                                        <img src="gif3.gif" alt="Snow" width="8%" align="center">
+                                    </font>
+                                </div>
+                             </marquee>
+                        </div>
+                    </div>
+                </header>
+
+                <footer class="page-footer">
+                    <div class="content4">
+                        <div class="paint">
+                                <div class="time">
+                                    <img src="pic7.png" width="20%" align="center">
+                                    &nbsp;
+                                    <p id="demo" >
+                                       
+                                    </p>
+                                </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <div class="page-leftbar">
+                    <div class="content2">
+                        <div class="paint1">
+                            <br>
+                            <br>
+                            <br>
+                            <h1 align="center"><i>Welcome... &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <br>To THE...  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  "IN & ON COFFEE"</h1></i>
+                            <form action="https://httpbin.org/post" method="post">
+                                <label for="Table"><h1><i>Choose a Table Number:</i></h1></label>
+                                <select name="Table Number" id="Table" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option selected>Open this select Table</option>
+                                    <option value="Table 01">Table 01</option>
+                                    <option value="Table 02">Table 02</option>
+                                    <option value="Table 03">Table 03</option>
+                                </select>
+                                <br><br>
+
+                                <a href="https://httpbin.org/post"><input type="submit" value="ENTER" ></a>
+
+                            </form>
+                        </div>
+                            <div class="div center"><img src="pic2.png"  style="width:40%" style="height:40%"></div>
+                    </div>
+                </div>
+
+                <main class="page-main">
+                    <div class="content3">
+                        <br>
+                        <br>
+                        <br>
+                        <center>
+                            <img src="pic1.png" alt="Snow" style="width:100%" style="height:100%">
+                            
+                            <h2 align="center"><i><br>Monday-Friday<br>Open 9:00 - Closed 18:00<br><br>Saturday-Sunday<br>Open 9:00 - Closed 20:00</h2></i>
+                            <img src="pic3.png"  style="width:60%" style="height:60%">
+                        </center>                        
+                    </div>
+                </main>
+                
+
+                <!-- <place class="page-place">
+                    <div class="content2">
+                        <a href="https://web.facebook.com/profile.php?id=100006765312945"style="text-decoration: none;">
+                            <div class="div center"><img src="i1.png" alt="Snow" style="width:5%" style="height:30%" align="center">
+                                <font color="black">
+                                :IN & ON COFFEE
+                                </font>
+                            </div>
+                        </a>
+                        <div class="div center"><img src="i2.png" alt="Snow" style="width:5%" style="height:30%" align="center">:099-613-5136</div>
+                    </div>
+                </place> -->
+
+                <place class="page-pic">
+                    <div class="content1">
+                        <div class="paint">
+                            <marquee  direction="lefe" scrollamount="10" width="90%" onmouseover="this.stop()" onmouseout="this.start()">
+                                <a href="https://web.facebook.com/profile.php?id=100006765312945"style="text-decoration: none;">
+                                    <div class="div center">
+                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <font color="black" size="5px">
+                                        :IN & ON Coffee
+                                        </font>
+                                        &nbsp; &nbsp;
+                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <font color="black" size="5px">
+                                        :IN & ON Coffee
+                                        </font>
+                                        &nbsp; &nbsp;
+                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <font color="black" size="5px">
+                                        :IN & ON Coffee
+                                        </font>
+                                        &nbsp; &nbsp;
+                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <font color="black" size="5px">
+                                        :IN & ON Coffee
+                                        </font>
+                                        &nbsp; &nbsp;
+                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <font color="black" size="5px">
+                                        :IN & ON Coffee
+                                        </font>
+                                         &nbsp; &nbsp;
+                                    </div>
+                                </a>
+                             </marquee>
+                        </div>
+                    </div>
+                </place>
+
+                <!-- <place class="page-place">
+                    <div class="content1">
+                        <div class="paint">
+                            <div class="time"><h2 id="demo"></h2></div>
+                        </div>   
+                    </div>
+                </place> -->
+
+                </div>
+        </body>
+    </head>
+</html>
+
+
