@@ -5,52 +5,60 @@ from . import db
 INON = Blueprint('INON', __name__)
 menu = [
     {
+        "img" : "m1",
         "id": 1,
-        "name": "Espesso";
-        "price": 40;
+        "name": "Espesso",
+        "price": 40,
         
     },
 
     {
+    "img" : "m2",
     "id": 2,
-        "name": "Americano";
-        "price": 45;
+        "name": "Americano",
+        "price": 45,
     },
 
     {
+    "img" : "m3",
     "id": 3,
-        "name": "Latte";
-        "price": 40;
+        "name": "Latte",
+        "price": 40,
     },
 
     {
+    "img" : "m4",
     "id": 4,
-        "name": "Cappucino";
-        "price": 45;
+        "name": "Cappucino",
+        "price": 45,
     },
 
     {
+    "img" : "m5",
     "id": 5,
-        "name": "Mocha";
-        "price": 50;
+        "name": "Mocha",
+        "price": 50,
     },
 
     {
-    "id": 6,
-        "name": "Macchiato";
-        "price": 40;
+        "img" : "m6",
+        "id": 6,
+        "name": "Macchiato",
+        "price": 40,
     },
 
     {
-    "id": 7,
-        "name": "Frappe";
-        "price": 45;
+        "img" : "m7",
+        "id": 7,
+        "name": "Frappe",
+        "price": 45,
     },
 
     {
-    "id": 8,
-        "name": "Affogata";
-        "price": 45;
+        "img" : "m8",
+        "id": 8,
+        "name": "Affogata",
+        "price": 45,
     },
 ]
 
