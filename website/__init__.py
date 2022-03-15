@@ -13,11 +13,11 @@ def create_app():
 
     from .auth import auth
 
-    from .Menu import Menu
+    from .INON import INON
 
-    app.register_blueprint(auth, url_prefix='/')
+    # app.register_blueprint(auth, url_prefix='/')
     
-    app.register_blueprint(Menu, url_prefix='/Chosetable')
+    app.register_blueprint(INON, url_prefix='/')
     
     from .models import User,Table, Topping, Menu, Order, Item 
 
