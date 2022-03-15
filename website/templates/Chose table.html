@@ -24,14 +24,14 @@
         <style>
             .grid {
             display: grid;
-            grid-template-columns: 2fr 2fr 4fr 3fr;
+            grid-template-columns:1fr 3fr 2fr 4fr 3fr 1fr;
             grid-template-rows: 70px minmax(200px,auto) 70px;
             grid-template-areas: 
-                'header header header footer'
-                'main main leftbar leftbar'
+                'column1 header header header footer column2'
+                'column1 main main leftbar leftbar column2'
                 /* 'main main leftbar leftbar'
                 'main main leftbar leftbar' */
-                'place pic  pic pic';
+                'column1 place pic  pic pic2 column2';
                 column-gap: 10px;
                 row-gap: 10px;
                 align-items:center;
@@ -61,6 +61,14 @@
             grid-area: pic;
             }
 
+            .page-column1 {
+            grid-area: column1;
+            }
+
+            .page-column2 {
+            grid-area: column2;
+            }
+
             .content1 {
             display: grid;
             color: #242424;
@@ -72,7 +80,7 @@
             height: 100%;
             border: 4px solid black ;
             padding: 10px;
-            border-radius: 60px 20px;
+            border-radius: 50px 50px;
             
             }
 
@@ -85,7 +93,7 @@
             height: 100%;
             border: 10px solid #644226 ;
             padding: 10px;
-            border-radius: 50px 20px;
+            border-radius: 60px 20px;
             justify-content: center;
             align-items: center;
             }
@@ -99,7 +107,7 @@
             height: 100%;
             border: 10px solid #644226 ;
             padding: 10px;
-            border-radius: 50px 20px;
+            border-radius: 50px 50px;
             justify-content: center;
             align-items: center;
             }
@@ -107,15 +115,15 @@
             .content4 {
             display: grid;
             color: #242424;
-            background-color: #644226;
+            background-color: #4b311c;
             opacity: 0.9;
             font-weight: 600;
             text-align: center;
             box-sizing: border-box;
             height: 100%;
-            border: 4px solid black ;
+            border: 10px solid black ;
             padding: 10px;
-            border-radius: 60px 20px;
+            border-radius: 50px 50px;
             
             }
 
@@ -144,7 +152,7 @@
 
         <style >
             html { 
-                background: url(bg1.png) no-repeat center fixed; 
+                background: url("../static/bg1.png") no-repeat center fixed; 
                 background-size: cover;
             } 
             
@@ -156,7 +164,7 @@
     <style type="text/css">
         h1{
             font-family:Segoe Print;
-            font-size: 60px;
+            font-size: 50px;
             text-shadow: 5px 2px #a36f44; 
         }
 
@@ -184,16 +192,17 @@
     </style>
 
         <body>
+            
             <div class="grid">
                 <header class="page-header">
                     <div class="content1">
                         <div class="paint">
                             <marquee  behavior="slide" scrollamount="15">
                                 <div class="div center">
-                                    <font size="10px" face="Segoe Print">
-                                        <img src="gif3.gif" alt="Snow" width="8%" align="center">
+                                    <font size="6px" face="Segoe Print">
+                                        <img src="../static/gif3.gif" alt="Snow" width="8%" align="center">
                                         ...Welcome to the " IN & ON Coffee "... 
-                                        <img src="gif3.gif" alt="Snow" width="8%" align="center">
+                                        <img src="../static/gif3.gif" alt="Snow" width="8%" align="center">
                                     </font>
                                 </div>
                              </marquee>
@@ -201,11 +210,15 @@
                     </div>
                 </header>
 
+                <div class="page-column1">
+                    <div class="content4"></div>
+                </div>
+
                 <footer class="page-footer">
                     <div class="content4">
                         <div class="paint">
                                 <div class="time">
-                                    <img src="pic7.png" width="20%" align="center">
+                                    <img src="../static/pic7.png" width="20%" align="center">
                                     &nbsp;
                                     <p id="demo" >
                                        
@@ -221,9 +234,9 @@
                             <br>
                             <br>
                             <br>
-                            <h1 align="center"><i>Welcome... &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <h1 align="center"><i>Welcome... &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                             <br>To THE...  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  "IN & ON COFFEE"</h1></i>
+                            <br> &nbsp; &nbsp; &nbsp;  "IN & ON COFFEE"</h1></i>
                             <form action="https://httpbin.org/post" method="post">
                                 <label for="Table"><h1><i>Choose a Table Number:</i></h1></label>
                                 <select name="Table Number" id="Table" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -238,8 +251,12 @@
 
                             </form>
                         </div>
-                            <div class="div center"><img src="pic2.png"  style="width:40%" style="height:40%"></div>
+                            <div class="div center"><img src="../static/pic2.png"  style="width:40%" style="height:40%"></div>
                     </div>
+                </div>
+
+                <div class="page-column2">
+                    <div class="content4"></div>
                 </div>
 
                 <main class="page-main">
@@ -248,10 +265,10 @@
                         <br>
                         <br>
                         <center>
-                            <img src="pic1.png" alt="Snow" style="width:100%" style="height:100%">
+                            <img src="../static/pic1.png" alt="Snow" style="width:100%" style="height:100%">
                             
                             <h2 align="center"><i><br>Monday-Friday<br>Open 9:00 - Closed 18:00<br><br>Saturday-Sunday<br>Open 9:00 - Closed 20:00</h2></i>
-                            <img src="pic3.png"  style="width:60%" style="height:60%">
+                            <img src="../static/pic3.png"  style="width:60%" style="height:60%">
                         </center>                        
                     </div>
                 </main>
@@ -276,27 +293,27 @@
                             <marquee  direction="lefe" scrollamount="10" width="90%" onmouseover="this.stop()" onmouseout="this.start()">
                                 <a href="https://web.facebook.com/profile.php?id=100006765312945"style="text-decoration: none;">
                                     <div class="div center">
-                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <img src="../static/i1.png" alt="Snow" style="width:5%"  align="center">
                                         <font color="black" size="5px">
                                         :IN & ON Coffee
                                         </font>
                                         &nbsp; &nbsp;
-                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <img src="../static/i1.png" alt="Snow" style="width:5%"  align="center">
                                         <font color="black" size="5px">
                                         :IN & ON Coffee
                                         </font>
                                         &nbsp; &nbsp;
-                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <img src="../static/i1.png" alt="Snow" style="width:5%"  align="center">
                                         <font color="black" size="5px">
                                         :IN & ON Coffee
                                         </font>
                                         &nbsp; &nbsp;
-                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <img src="../static/i1.png" alt="Snow" style="width:5%"  align="center">
                                         <font color="black" size="5px">
                                         :IN & ON Coffee
                                         </font>
                                         &nbsp; &nbsp;
-                                        <img src="i1.png" alt="Snow" style="width:5%"  align="center">
+                                        <img src="../static/i1.png" alt="Snow" style="width:5%"  align="center">
                                         <font color="black" size="5px">
                                         :IN & ON Coffee
                                         </font>
