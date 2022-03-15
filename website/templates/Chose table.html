@@ -24,11 +24,11 @@
         <style>
             .grid {
             display: grid;
-            grid-template-columns:1fr 3fr 2fr 4fr 3fr 1fr;
+            grid-template-columns:1fr 4fr 4fr 4fr 4fr 1fr;
             grid-template-rows: 70px minmax(200px,auto) 70px;
             grid-template-areas: 
                 'column1 header header header footer column2'
-                'column1 main main leftbar leftbar column2'
+                'column1 leftbar leftbar leftbar leftbar column2'
                 /* 'main main leftbar leftbar'
                 'main main leftbar leftbar' */
                 'column1 place pic  pic pic2 column2';
@@ -45,9 +45,9 @@
             grid-area: leftbar;
             }
 
-            .page-main {
+            /* .page-main {
             grid-area: main;
-            }
+            } */
 
             .page-footer {
             grid-area: footer;
@@ -123,7 +123,7 @@
             height: 100%;
             border: 10px solid black ;
             padding: 10px;
-            border-radius: 50px 50px;
+            /* border-radius: 50px 50px; */
             
             }
 
@@ -163,9 +163,9 @@
 
     <style type="text/css">
         h1{
-            font-family:Segoe Print;
-            font-size: 50px;
-            text-shadow: 5px 2px #a36f44; 
+            font-family:Amatic SC;
+            font-size: 60px;
+            text-shadow: 3px 2px #a36f44; 
         }
 
         h2{
@@ -234,9 +234,21 @@
                             <br>
                             <br>
                             <br>
-                            <h1 align="center"><i>Welcome... &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            <br>To THE...  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                            <br> &nbsp; &nbsp; &nbsp;  "IN & ON COFFEE"</h1></i>
+                            <br>
+                            <h1 align="center"><i>Welcome
+                            To THE  
+                              "IN & ON COFFEE"</h1></i>  
+                        
+                        <center>
+                        <img src="../static/pic1.png" alt="Snow" style="width:70%" style="height:70%">
+                        <br>
+                        </center>
+                        <center>
+                            
+                            <h2 align="center"><i><br>Monday-Friday<br>Open 9:00 - Closed 18:00<br><br>Saturday-Sunday<br>Open 9:00 - Closed 20:00</h2></i>
+                            <!-- <img src="../static/pic3.png"  style="width:60%" style="height:60%"> -->
+                        </center>
+
                             <form action="https://httpbin.org/post" method="post">
                                 <label for="Table"><h1><i>Choose a Table Number:</i></h1></label>
                                 <select name="Table Number" id="Table" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -259,7 +271,7 @@
                     <div class="content4"></div>
                 </div>
 
-                <main class="page-main">
+                <!-- <main class="page-main">
                     <div class="content3">
                         <br>
                         <br>
@@ -271,7 +283,7 @@
                             <img src="../static/pic3.png"  style="width:60%" style="height:60%">
                         </center>                        
                     </div>
-                </main>
+                </main> -->
                 
 
                 <!-- <place class="page-place">
