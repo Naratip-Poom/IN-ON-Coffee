@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">>
+
+  <style>
+    body,
+    html {
+      height: 100%
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Amatic SC", sans-serif
+    }
+
+    .menu {
+      display: none
+    }
+
+    .bgimg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("recommendedmenu5.jpg");
+      min-height: 90%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Navbar (sit on top) -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-padding">
+      <span class="w3-tag w3-xlarge">Open from 09.00am to 16.00pm</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white w3-hide-small" style="font-size:100px">IN & ON</span>
+    </div>
+  </header>
+  <div class="w3-top w3-hide-small">
+    <div class="w3-bar w3-xlarge w3-black w3-grayscale-max  w3-hover-opacity-off" id="myNavbar">
+      <a href="#" class="w3-bar-item w3-button">HOME</a>
+      <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+      <div style="margin-left: 1000px">
+        <a href="" class="w3-bar-item w3-button">login</a>
+        <a href="file:///C:/Users/User/Desktop/coffee/test.html" class="w3-bar-item w3-button">logout</a>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <!--Order confirm -->
+  <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="myMap" style="margin-top: 32px">
+    <div class="w3-content">
+
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:32px">Order confirm</h1>
+      <section class="h-100 h-custom" style="background-color: #d2c9ff;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+              <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                <div class="card-body p-0">
+                  <div class="row g-0">
+                    <div class="col-lg-8">
+                      <div class="p-5">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                          <h1 class="fw-bold mb-0 text-black">Basket of your coffee</h1>
+                          <h6 class="mb-0 text-muted">3 items</h6>
+                        </div>
+                        <hr class="my-4">
+
+                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                          <div class="col-md-2 col-lg-2 col-xl-2">
+                            <img src="recommendedmenu4.jpg" class="img-fluid rounded-3">
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-3">
+                            <h4 class="text-black mb-0">capuchino</h4>
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                              <i class="fas fa-minus"></i>
+                            </button>
+
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                              class="form-control form-control-sm" />
+
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                            <h4 class="w3-text-black">€ 44.00</h4>
+                          </div>
+                          <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                          </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                          <div class="col-md-2 col-lg-2 col-xl-2">
+                            <img src="recommendedmenu3.jpg" class="img-fluid rounded-3">
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-3">
+
+                            <h4 class="text-black mb-0">Latea</h4>
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                              <i class="fas fa-minus"></i>
+                            </button>
+
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                              class="form-control form-control-sm" />
+
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                            <h4 class="w3-text-black">€ 44.00</h4>
+                          </div>
+                          <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                          </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                          <div class="col-md-2 col-lg-2 col-xl-2">
+                            <img src="recommendedmenu2.jpg" class="img-fluid rounded-3">
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-3">
+
+                            <h4 class="text-black mb-0">Mocca</h4>
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                              <i class="fas fa-minus"></i>
+                            </button>
+
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                              class="form-control form-control-sm" />
+
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                            <h4 class="w3-text-black">€ 44.00</h4>
+                          </div>
+                          <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                          </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="pt-5">
+                          <h2 class="mb-0"><a href="file:///C:/Users/User/Desktop/coffee/indexcoffee.html"
+                              class="text-body"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 bg-black">
+                      <div class="p-5">
+                        <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                        <hr class="my-4">
+
+                        <div class="d-flex justify-content-between mb-4">
+                          <h5 class="text-uppercase">items 3</h5>
+                          <h5>€ 132.00</h5>
+                        </div>
+
+                        <h5 class="text-uppercase mb-3">Shipping</h5>
+
+                        <hr class="my-4">
+
+                        <div class="d-flex justify-content-between mb-5">
+                          <h5 class="text-uppercase">Total price</h5>
+                          <h5>€ 137.00</h5>
+                        </div>
+                        <center>
+                          <button type="button" class="btn btn-light btn-block btn-lg"
+                            data-mdb-ripple-color="dark">order confirm</button>
+                        </center>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+    </div>
+  </div>
+
+</body>
+
+</html>
