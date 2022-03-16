@@ -8,13 +8,13 @@ auth = Blueprint('auth', __name__)
 def home():
     return render_template("home.html")
 
-@auth.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        email = request.form.get('email')
-        password = request.form.get('password')
-
+@auth.route('/login', methods=['POST', 'GET']) 
+def login(): 
     return render_template("login.html")
+    
+@auth.route('/login1', methods=['POST', 'GET']) 
+def login1(): 
+    return redirect(url_for("auth.login"))
 
 
 @auth.route('/logout')
