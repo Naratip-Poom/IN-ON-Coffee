@@ -157,7 +157,7 @@ def final():
     return render_template("final.html", menu=menu)
 
 
-@INON.route('/indexcoffee')
+@INON.route('/indexcoffee',methods=["GET", "POST"])
 def index():
     return render_template("indexcoffee.html")
 
