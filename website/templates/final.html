@@ -100,7 +100,7 @@
       <div class="w3-container w3-padding-64 w3-brown w3-xlarge" id="about" style="margin-top: 32px">
         <div class="w3-content">
           <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
-          <form>
+          <form action="/baskettest" method="post">
             <div class="row row-cols-1 row-cols-md-3 g-4">
 
 
@@ -133,32 +133,47 @@
                       <font color="#6c2c10" size="4">very sweet</font>
                     </label>
                     <br><br>
+                    <center>
+                    <div class=" col-lg-3 col-xl-2 d-grid">
+                      <button class="btn btn-link px-3"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
+                        <i class="fas fa-minus"></i>
+                      </button>
                     
-
-
+                      <input id="form1" min="0" name="{{moon.id}}-quantity" value="0" type="number" 
+                        class="form-control form-control-sm" />
+                    
+                      <button class="btn btn-link px-3 "
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <i class="fas fa-plus bg-black"></i>
+                      </button>
+                    </div>
+                  </center>
 
                   </div>
                 </div>
               </div>
-              {% endfor %} 
-              <a href="https://meet.google.com/fkm-uexo-kjufile:///C:/Users/rungsiman/Desktop/web/final/final.html" input type="submit" value="Submit">
-              
+              {% endfor %}
+              <div class="btn btn-success" > 
+                <button  type="submit" value="Submit">Submit</button>
+              </div>
             </form>
               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
+
+<!-- <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+  <button class="btn btn-link px-2"
+    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+    <i class="fas fa-minus"></i>
+  </button>
+
+  <input id="form1" min="0" name="quantity" value="1" type="number"
+    class="form-control form-control-sm" />
+
+  <button class="btn btn-link px-2 "
+    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+    <i class="fas fa-plus bg-black"></i>
+  </button>
+</div> -->

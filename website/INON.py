@@ -74,6 +74,8 @@ def final():
 def index():
     return render_template("indexcoffee.html")
 
-@INON.route('/baskettest')
+@INON.route('/baskettest',methods=["GET", "POST"])
 def basket():
-    return render_template("baskettest.html")
+    if request.method == "POST":
+        return request.form
+    # return render_template("baskettest.html")
