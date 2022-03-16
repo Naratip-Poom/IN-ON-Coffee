@@ -36,7 +36,7 @@
     .bgimg {
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url("../static/recommendedmenu5.jpg");
+      background-image: url("recommendedmenu5.jpg");
       min-height: 90%;
     }
 
@@ -52,7 +52,7 @@
   <!-- Navbar (sit on top) -->
   <div class="w3-top w3-hide-small">
     <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-      <a href="indexcoffee.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="#" class="w3-bar-item w3-button">HOME</a>
       <a href="#menu" class="w3-bar-item w3-button">MENU</a>
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
@@ -87,7 +87,9 @@
           </svg>
 
           <div class="w3-bar" style="margin-top: 32px">
-            <a href="baskettest.html" class="w3-button w3-orange">BASKET</a>
+            <a href="https://www.w3schools.com/w3css/w3css_buttons.asp" class="w3-button w3-orange">COFFEE</a>
+            <a href="https://www.w3schools.com/w3css/w3css_buttons.asp" class="w3-button w3-orange">TOPPING</a>
+            <a href="https://www.w3schools.com/w3css/w3css_buttons.asp" class="w3-button w3-orange">BASKET</a>
 
           </div>
         </div>
@@ -98,290 +100,51 @@
       <div class="w3-container w3-padding-64 w3-brown w3-xlarge" id="about" style="margin-top: 32px">
         <div class="w3-content">
           <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            
-            <div class="col">
-              <div class="card">
-                <img src="../static/m1.jpg" class="card-img-top" height="200" alt="cover">
-                <div class="card-body">
+          <form>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
 
-                  <font class="text-box1" class="card-title" color="#6c2c10" size="6">Espresso</font>
-                  <form action="/action_page.php">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="hot">
+
+              {% for moon in menu %}
+              <div class="col">
+                <div class="card">
+                  <img src="../static/{{moon.img}}.jpg" class="card-img-top" height="200" alt="cover">
+                  <div class="card-body">
+
+                    <font class="text-box1" class="card-title" color="#6c2c10" size="6">{{moon.name}}</font><br>
+
+                    <input type="checkbox" id="vehicle1" name="{{moon.id}}-hot" value="hot">
                     <label class="text-box1" for="vehicle1">
                       <font color="#6c2c10" size="4">hot</font>
                     </label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="iced">
+                    <input type="checkbox" id="vehicle2" name="{{moon.id}}-icde" value="iced">
                     <label class="text-box1" for="vehicle2">
                       <font color="#6c2c10" size="4">iced</font>
                     </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boa
-  <label class=" text-box1" for="vehicle3">
-                    <font color="#6c2c10" size="4">slightly sweet</font></label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="medium sweet">
+                    <input type="checkbox" id="vehicle3" name="{{moon.id}}-slightly-sweet" value="slightly-sweet">
+                    <label class="text-box1" for="vehicle3">
+                      <font color="#6c2c10" size="4">slightly sweet</font>
+                    </label>
+                    <input type="checkbox" id="vehicle3" name="{{moon.id}}-medium-sweet" value="medium-sweet">
                     <label class="text-box1" for="vehicle3">
                       <font color="#6c2c10" size="4">medium sweet</font>
                     </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="very sweet">
+                    <input type="checkbox" id="vehicle3" name="{{moon.id}}-very-sweet" value="very-sweet">
                     <label class="text-box1" for="vehicle3">
                       <font color="#6c2c10" size="4">very sweet</font>
                     </label>
                     <br><br>
-                    <input type="submit" value="Submit">
+                    
 
-                  </form>
 
+
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col">
-              <div class="card">
-                <img src="../static/m2.jpg" class="card-img-top" height="200" alt="cover">
-                <div class="card-body">
-                  <font class="text-box1" class="card-title" color="#6c2c10" size="6">Americano</font>
-                  <form action="/action_page.php">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="hot">
-                    <label class="text-box1" for="vehicle1">
-                      <font color="#6c2c10" size="4">hot</font>
-                    </label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="iced">
-                    <label class="text-box1" for="vehicle2">
-                      <font color="#6c2c10" size="4">iced</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="slightly sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">slightly sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="medium sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">medium sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="very sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">very sweet</font>
-                    </label>
-
-                    <br><br>
-                    <input type="submit" value="Submit">
-                  </form>
-
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../static/m3.jpg" class="card-img-top" height="200" alt="cover">
-                <div class="card-body">
-                  <font class="text-box1" class="card-title" color="#6c2c10" size="6">Latte</font>
-                  <form action="/action_page.php">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="hot">
-                    <label class="text-box1" for="vehicle1">
-                      <font color="#6c2c10" size="4">hot</font>
-                    </label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="iced">
-                    <label class="text-box1" for="vehicle2">
-                      <font color="#6c2c10" size="4">iced</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="slightly sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">slightly sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="medium sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">medium sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="very sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">very sweet</font>
-                    </label><br><br>
-                    <input type="submit" value="Submit">
-                  </form>
-
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../static/m4.jpg" class="card-img-top" height="200" alt="cover">
-                <div class="card-body">
-
-                  <font class="text-box1" class="card-title" color="#6c2c10" size="6">Cappuccino</font>
-                  <form action="/action_page.php">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="hot">
-                    <label class="text-box1" for="vehicle1">
-                      <font color="#6c2c10" size="4">hot</font>
-                    </label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="iced">
-                    <label class="text-box1" for="vehicle2">
-                      <font color="#6c2c10" size="4">iced</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="slightly sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">slightly sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="medium sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">medium sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="very sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">very sweet</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="germ">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">germ</font>
-                    </label>
-                    <br><br>
-                    <input type="submit" value="Submit">
-
-                  </form>
-
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../static/m5.jpg" class="card-img-top" height="200" alt="cover">
-                <div class="card-body">
-
-                  <font class="text-box1" class="card-title" color="#6c2c10" size="6">Mocha</font>
-                  <form action="/action_page.php">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="hot">
-                    <label class="text-box1" for="vehicle1">
-                      <font color="#6c2c10" size="4">hot</font>
-                    </label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="iced">
-                    <label class="text-box1" for="vehicle2">
-                      <font color="#6c2c10" size="4">iced</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="slightly sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">slightly sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="medium sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">medium sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="very sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">very sweet</font>
-                    </label><br><br><br>
-                    <input type="submit" value="Submit">
-
-                  </form>
-
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../static/m6.jpg" class="card-img-top" height="200" alt="cover">
-                <div class="card-body">
-
-                  <font class="text-box1" class="card-title" color="#6c2c10" size="6">Macchiato</font>
-                  <form action="/action_page.php">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="hot">
-                    <label class="text-box1" for="vehicle1">
-                      <font color="#6c2c10" size="4">hot</font>
-                    </label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="iced">
-                    <label class="text-box1" for="vehicle2">
-                      <font color="#6c2c10" size="4">iced</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="slightly sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">slightly sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="medium sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">medium sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="very sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">very sweet</font>
-                    </label>
-                    <br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="whipped cream">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">whipped cream</font>
-                    </label><br><br>
-                    <input type="submit" value="Submit">
-
-                  </form>
-
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../static/m7.jpg" class="card-img-top" height="200" alt="cover">
-                <div class="card-body">
-
-                  <font class="text-box1" class="card-title" color="#6c2c10" size="6">Frappe</font>
-                  <form action="/action_page.php">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="hot">
-                    <label class="text-box1" for="vehicle1">
-                      <font color="#6c2c10" size="4">hot</font>
-                    </label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="iced">
-                    <label class="text-box1" for="vehicle2">
-                      <font color="#6c2c10" size="4">iced</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="slightly sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">slightly sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="medium sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">medium sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="very sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">very sweet</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="whipped cream">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">whipped cream</font>
-                    </label>
-
-                    <br><br>
-                    <input type="submit" value="Submit">
-
-                  </form>
-
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="../static/m8.jpg" class="card-img-top" height="200" alt="cover">
-                <div class="card-body">
-
-                  <font class="text-box1" class="card-title" color="#6c2c10" size="6">Affogato</font>
-                  <form action="/action_page.php">
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="hot">
-                    <label class="text-box1" for="vehicle1">
-                      <font color="#6c2c10" size="4">hot</font>
-                    </label>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="iced">
-                    <label class="text-box1" for="vehicle2">
-                      <font color="#6c2c10" size="4">iced</font>
-                    </label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">slightly sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="medium sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">medium sweet</font>
-                    </label>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="very sweet">
-                    <label class="text-box1" for="vehicle3">
-                      <font color="#6c2c10" size="4">very sweet</font>
-                    </label>
-                    <br><br><br>
-                    <input type="submit" value="Submit">
+              {% endfor %} 
+              <a href="https://meet.google.com/fkm-uexo-kjufile:///C:/Users/rungsiman/Desktop/web/final/final.html" input type="submit" value="Submit">
+              
+            </form>
+              
 
 
 
@@ -390,10 +153,6 @@
 
 
 
-
-                </div>
-              </div>
-            </div>
 
 
 
