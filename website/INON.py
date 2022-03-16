@@ -2,6 +2,9 @@ from flask import Blueprint, render_template, request, flash
 from .models import User
 from . import db
 
+
+
+
 INON = Blueprint('INON', __name__)
 menu = [
     {
@@ -62,6 +65,8 @@ menu = [
     },
 ]
 
+
+
 @INON.route('/')
 def home():
     return render_template("Chose table.html")
@@ -79,3 +84,4 @@ def basket():
     if request.method == "POST":
         return request.form
     # return render_template("baskettest.html")
+
