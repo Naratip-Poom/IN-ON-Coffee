@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 
-db = SQLAlchemy()
+db = SQLAlchemy(session_options={"autoflush": True})
 DB_NAME = "database.db"
 
 def create_app():
